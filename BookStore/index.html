@@ -4,81 +4,124 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="images/favicon/android-chrome-512x512.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+        <link rel="manifest" href="images/favicon/site.webmanifest">
+
         <title>Book Store</title>
         
         <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined">
         <link rel="stylesheet" href="css/stylesheet.css">
-        
-        <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>  
     </head>
     <body>
-        <header class="mdc-top-app-bar mdc-theme--primary-bg mdc-elevation--z8">
+        <header class="mdc-top-app-bar mdc-theme--primary-bg mdc-elevation--z18">
             <div class="mdc-top-app-bar__row">
                 <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-                    <span class="mdc-top-app-bar__title">Book Store</span>
+                    <span class="mdc-top-app-bar__title">&#xF8FF Books Store</span>
                 </section>
-                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
-                    <a href="#" class="material-icons mdc-top-app-bar__action-item" aria-label="Account">shopping_cart</a>     
-                    <a href="#" class="material-icons mdc-top-app-bar__action-item" aria-label="Account">account_circle</a>
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end padding--end-20" role="toolbar">
+                    <!-- <a href="#" class="bag mdc-top-app-bar__action-item"></a> -->
+                    <a href="#" class="material-icons-outlined mdc-top-app-bar__action-item" aria-label="Shopping Cart">shopping_cart</a>
+                    <a href="#" class="material-icons-outlined mdc-top-app-bar__action-item padding--end-20" aria-label="Account">account_circle</a>
                 </section>
             </div>
         </header>
 
         <div class="body">
             <div class="hero">
-                <div class="mdc-card login-card mdc-elevation--z4">
-                    <div class="login-head">
-                        <span class="title">Register</span>
-                        <hr>
-                    </div>                    
-                    <form action="" class="mdc-form">
-                        <div class="mdc-text-field mdc-text-field--outlined">
-                            <input type="text" id="tf-outlined" class="mdc-text-field__input">
-                            <div class="mdc-notched-outline">
-                                <div class="mdc-notched-outline__leading"></div>
-                                <div class="mdc-notched-outline__notch">
-                                    <label for="tf-outlined" class="mdc-floating-label">Your Name</label>
+                <div class="mdc-layout-grid">
+                    <div class="mdc-layout-grid__inner">
+                        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
+                            <div class="hero-image">
+                                <div class="hero-text">
+                                    <h2 class="mdc-typography--headline2">&#xF8FF Books Store</h2>
+                                    <h3 class="mdc-typography--headline3">
+                                        An all-new chapter.
+                                    </h3>
                                 </div>
-                                <div class="mdc-notched-outline__trailing"></div>
                             </div>
                         </div>
-                        <br>
-                        <div class="mdc-text-field mdc-text-field--outlined">
-                            <input type="text" id="tf-outlined" class="mdc-text-field__input">
-                            <div class="mdc-notched-outline">
-                                <div class="mdc-notched-outline__leading"></div>
-                                <div class="mdc-notched-outline__notch">
-                                    <label for="tf-outlined" class="mdc-floating-label">Your E-Mail</label>
+                        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                            <div class="mdc-card login-card mdc-elevation--z8">
+                                <div class="login-head">
+                                    <h4 class="mdc-typography--headline4">Sign Up</h4>
+                                    <h6 class="mdc-typography--subtitle1">If you don't have an account already, please sign up to use our services</h6>
+                                    <hr>
+                                </div>                    
+                                <form action="" class="mdc-form">
+                                    <div class="mdc-text-field mdc-text-field--outlined">
+                                        <input type="text" id="name" class="mdc-text-field__input">
+                                        <div class="mdc-notched-outline">
+                                            <div class="mdc-notched-outline__leading"></div>
+                                            <div class="mdc-notched-outline__notch">
+                                                <label for="tf-outlined" class="mdc-floating-label mdc-theme--primary">Your Name</label>
+                                            </div>
+                                            <div class="mdc-notched-outline__trailing"></div>
+                                        </div>
+                                    </div>
+                                    <div class="mdc-text-field mdc-text-field--outlined">
+                                        <input type="text" id="email" class="mdc-text-field__input">
+                                        <div class="mdc-notched-outline">
+                                            <div class="mdc-notched-outline__leading"></div>
+                                            <div class="mdc-notched-outline__notch">
+                                                <label for="tf-outlined" class="mdc-floating-label mdc-theme--primary">Your Email</label>
+                                            </div>
+                                            <div class="mdc-notched-outline__trailing"></div>
+                                        </div>
+                                    </div>
+                                    <div class="mdc-text-field mdc-text-field--outlined">
+                                        <input type="password" id="password" class="mdc-text-field__input">
+                                        <div class="mdc-notched-outline">
+                                            <div class="mdc-notched-outline__leading"></div>
+                                            <div class="mdc-notched-outline__notch">
+                                                <label for="tf-outlined" class="mdc-floating-label mdc-theme--primary">Password</label>
+                                            </div>
+                                            <div class="mdc-notched-outline__trailing"></div>
+                                        </div>
+                                    </div>
+                                    <div class="mdc-text-field mdc-text-field--outlined">
+                                        <input type="password" id="confirm-password" class="mdc-text-field__input">
+                                        <div class="mdc-notched-outline">
+                                            <div class="mdc-notched-outline__leading"></div>
+                                            <div class="mdc-notched-outline__notch">
+                                                <label for="tf-outlined" class="mdc-floating-label mdc-theme--primary">Confirm Password</label>
+                                            </div>
+                                            <div class="mdc-notched-outline__trailing"></div>
+                                        </div>
+                                    </div>
+                                    <div class="flex">
+                                        <button class="mdc-button mdc-button--outlined mdc-theme--secondary" type="submit">
+                                            <span class="mdc-button__label">Sign Up</span>
+                                        </button>
+                                    </div>
+                                </form>
+                                <div class="divider-with-text">
+                                    Or
                                 </div>
-                                <div class="mdc-notched-outline__trailing"></div>
+                                <div>
+                                    <div class="flex">
+                                        <img src="images/apple-id.png" alt="Sign In with Apple" class="sign-in-with-apple">
+                                    </div>
+                                    <div class="flex">
+                                        <button class="mdc-button mdc-button--outlined mdc-theme--secondary" type="submit">
+                                            <span class="mdc-button__label">Login with E-Mail</span>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <br>
-                        <div class="mdc-text-field mdc-text-field--outlined">
-                            <input type="text" id="tf-outlined" class="mdc-text-field__input">
-                            <div class="mdc-notched-outline">
-                                <div class="mdc-notched-outline__leading"></div>
-                                <div class="mdc-notched-outline__notch">
-                                    <label for="tf-outlined" class="mdc-floating-label">Password</label>
-                                </div>
-                                <div class="mdc-notched-outline__trailing"></div>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="mdc-text-field mdc-text-field--outlined">
-                            <input type="text" id="tf-outlined" class="mdc-text-field__input">
-                            <div class="mdc-notched-outline">
-                                <div class="mdc-notched-outline__leading"></div>
-                                <div class="mdc-notched-outline__notch">
-                                    <label for="tf-outlined" class="mdc-floating-label">Re-enter Password</label>
-                                </div>
-                                <div class="mdc-notched-outline__trailing"></div>
-                            </div>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
+        
+        <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>  
+        <script src="js/mdc-init.js"></script>
     </body>
 </html>
