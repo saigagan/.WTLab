@@ -17,8 +17,6 @@ html, body {
     height: 100%;
 
     font-family: var(--typography-font-family);
-
-    display: flex;
 }
 
 a, a:hover, a:visited {
@@ -46,6 +44,26 @@ hr {
 
 .flex {
     display: flex;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.align-text-center {
+    text-align: center;
+}
+
+.align-text-left {
+    text-align: left;
+}
+
+.align-text-right {
+    text-align: right;
+}
+
+.align-text-justify {
+    text-align: justify;
 }
 
 .divider-with-text {

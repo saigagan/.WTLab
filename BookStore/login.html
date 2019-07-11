@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="images/favicon/android-chrome-512x512.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+        <link rel="manifest" href="images/favicon/site.webmanifest">
+
+        <title>Book Store</title>
+        
+        <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined">
+        <link rel="stylesheet" href="css/stylesheet.css">
+    </head>
+    <body>
+        <div class="mdc-layout-grid flex full-height">
+            <div class="mdc-layout-grid__inner full-height">
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4"></div>
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                    <div class="mdc-card login-card mdc-elevation--z6">
+                        <div class="login-head align-text-center">
+                            <img src="images/favicon/android-chrome-192x192.png" alt="Logo" width="48">
+                            <h5 class="mdc-typography--headline5">Sign in</h5   >
+                            <h6 class="mdc-typography--subtitle2 hidden hide-on-mac">to continue to Apple Book Store</h6>
+                            <hr>
+                        </div>
+                        <form action="" class="mdc-form">
+                            <div class="mdc-text-field mdc-text-field--outlined">
+                                <input type="text" id="email" class="mdc-text-field__input" aria-controls="email-helper-text" aria-describedby="email-helper-text">
+                                <div class="mdc-notched-outline">
+                                    <div class="mdc-notched-outline__leading"></div>
+                                    <div class="mdc-notched-outline__notch">
+                                        <label for="email" class="mdc-floating-label mdc-theme--primary">Your Email</label>
+                                    </div>
+                                    <div class="mdc-notched-outline__trailing"></div>
+                                </div>
+                            </div>
+                            <div class="mdc-text-field-helper-line">
+                                <div id="email-helper-text" class="mdc-text-field-helper-text" aria-hidden="true">
+                                    Enter a valid E-Mail Address   
+                                    <!-- Ex: John-Appleseed@mac.com -->
+                                </div>
+                            </div>
+                            <div class="mdc-text-field-container">
+                                <div class="mdc-text-field mdc-text-field--outlined">
+                                    <input type="password" id="password" class="mdc-text-field__input" aria-controls="password-helper-text" aria-describedby="password-helper-text">
+                                    <div class="mdc-notched-outline">
+                                        <div class="mdc-notched-outline__leading"></div>
+                                        <div class="mdc-notched-outline__notch">
+                                            <label for="password" class="mdc-floating-label mdc-theme--primary">Password</label>
+                                        </div>
+                                        <div class="mdc-notched-outline__trailing"></div>
+                                    </div>
+                                </div>
+                                <div class="mdc-text-field-helper-line">
+                                    <div id="password-helper-text" class="mdc-text-field-helper-text" aria-hidden="true">
+                                        Enter your Account Password
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <button class="mdc-button mdc-button--outlined mdc-theme--secondary" type="submit">
+                                    <span class="mdc-button__label">Sign In</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>  
+        <script src="js/mdc-init.js"></script>
+    </body>
+</html>

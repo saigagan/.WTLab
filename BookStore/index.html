@@ -19,22 +19,22 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined">
         <link rel="stylesheet" href="css/stylesheet.css">
     </head>
-    <body>
+    <body class="flex">
         <header class="mdc-top-app-bar mdc-theme--primary-bg mdc-elevation--z18">
             <div class="mdc-top-app-bar__row">
                 <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-                    <span class="mdc-top-app-bar__title">&#xF8FF Books Store</span>
+                    <span class="mdc-top-app-bar__title show-on-mac">&#xF8FF Books Store</span>
+                    <span class="mdc-top-app-bar__title hide-on-mac">Apple Books Store</span>
                 </section>
                 <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end padding--end-20" role="toolbar">
                     <!-- <a href="#" class="bag mdc-top-app-bar__action-item"></a> -->
-                    <a href="#" class="material-icons-outlined mdc-top-app-bar__action-item" aria-label="Shopping Cart">shopping_cart</a>
-                    <a href="#" class="material-icons-outlined mdc-top-app-bar__action-item padding--end-20" aria-label="Account">account_circle</a>
+                    <a href="#" class="material-icons mdc-top-app-bar__action-item" aria-label="Shopping Cart">shopping_cart</a>
+                    <a href="#" class="material-icons mdc-top-app-bar__action-item padding--end-20" aria-label="Account">account_circle</a>
                 </section>
             </div>
         </header>
 
         <div class="body flex">
-                <div class="flex">
             <div class="mdc-layout-grid flex full-height">
                     <div class="mdc-layout-grid__inner full-height">
                         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
@@ -42,7 +42,8 @@
                                 <div class="hero-image">
                                     <img src="images/hero.jpg" width="100%">
                                     <div class="hero-text">
-                                        <h2 class="mdc-typography--headline2">&#xF8FF Books Store</h2>
+                                        <h2 class="mdc-typography--headline2 show-on-mac">&#xF8FF Books Store</h2>
+                                        <h2 class="mdc-typography--headline2 hide-on-mac">Apple Books Store</h2>
                                         <h3 class="mdc-typography--headline3">
                                             An all-new chapter.
                                         </h3>
@@ -89,7 +90,7 @@
                                         </div>
                                         <div class="mdc-text-field-helper-line">
                                             <div id="email-helper-text" class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent" aria-hidden="true">
-                                                You can use letters, numbers & period.
+                                                Enter a valid E-Mail Address
                                                 <!-- Ex: John-Appleseed@mac.com -->
                                             </div>
                                         </div>
@@ -142,8 +143,8 @@
                                         <img src="images/apple-id.png" alt="Sign In with Apple" class="sign-in-with-apple">
                                     </div>
                                     <div class="flex">
-                                        <button class="mdc-button mdc-button--outlined mdc-theme--secondary" type="submit">
-                                            <span class="mdc-button__label">Login with E-Mail</span>
+                                        <button class="mdc-button mdc-button--outlined mdc-theme--secondary" type="submit" onclick="location.href='login.html'">
+                                            <span class="mdc-button__label">Sign In with E-Mail</span>
                                         </button>
                                     </div>
                                 </div>
