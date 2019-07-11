@@ -13,11 +13,11 @@ function isMacintosh() {
 function isWindows() {
   return navigator.platform.indexOf('Win') > -1
 }
-
+ 
 if(isMacintosh()) {
-  var hidden = document.querySelector('.hide-on-mac')
+  var hidden = document.querySelectorAll('.hide-on-mac')
   for(var i = 0; i < hidden.length; i++) {
-    hidden[i].style.visibility = "hidden";
+    hidden[i].style.display = "none";
   }
 } else {
   var hidden = document.querySelectorAll('.show-on-mac')

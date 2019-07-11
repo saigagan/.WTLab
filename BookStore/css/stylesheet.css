@@ -40,6 +40,7 @@ hr {
 
 .full-height {
     flex-grow: 1.0;
+    min-height: 100%;
 }
 
 .flex {
@@ -64,6 +65,12 @@ hr {
 
 .align-text-justify {
     text-align: justify;
+}
+
+.align-content-center {
+    justify-content: center;
+    align-items: center; 
+    display: flex;
 }
 
 .divider-with-text {
@@ -115,6 +122,13 @@ hr {
 
 .mdc-card.login-card {
     width: 100%;
+    padding: 20px 30px;
+    display: inline-block;
+    margin: auto;
+}
+
+.mdc-card.signin-card {
+    width: 450px;
     padding: 20px 30px;
     display: inline-block;
     margin: auto;

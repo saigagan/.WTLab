@@ -18,65 +18,63 @@
         <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined">
         <link rel="stylesheet" href="css/stylesheet.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>  
     </head>
     <body>
-        <div class="mdc-layout-grid flex full-height">
-            <div class="mdc-layout-grid__inner full-height">
-                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4"></div>
-                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-                    <div class="mdc-card login-card mdc-elevation--z6">
-                        <div class="login-head align-text-center">
-                            <img src="images/favicon/android-chrome-192x192.png" alt="Logo" width="48">
-                            <h5 class="mdc-typography--headline5">Sign in</h5   >
-                            <h6 class="mdc-typography--subtitle2 hidden hide-on-mac">to continue to Apple Book Store</h6>
-                            <hr>
-                        </div>
-                        <form action="" class="mdc-form">
-                            <div class="mdc-text-field mdc-text-field--outlined">
-                                <input type="text" id="email" class="mdc-text-field__input" aria-controls="email-helper-text" aria-describedby="email-helper-text">
-                                <div class="mdc-notched-outline">
-                                    <div class="mdc-notched-outline__leading"></div>
-                                    <div class="mdc-notched-outline__notch">
-                                        <label for="email" class="mdc-floating-label mdc-theme--primary">Your Email</label>
-                                    </div>
-                                    <div class="mdc-notched-outline__trailing"></div>
-                                </div>
-                            </div>
-                            <div class="mdc-text-field-helper-line">
-                                <div id="email-helper-text" class="mdc-text-field-helper-text" aria-hidden="true">
-                                    Enter a valid E-Mail Address   
-                                    <!-- Ex: John-Appleseed@mac.com -->
-                                </div>
-                            </div>
-                            <div class="mdc-text-field-container">
-                                <div class="mdc-text-field mdc-text-field--outlined">
-                                    <input type="password" id="password" class="mdc-text-field__input" aria-controls="password-helper-text" aria-describedby="password-helper-text">
-                                    <div class="mdc-notched-outline">
-                                        <div class="mdc-notched-outline__leading"></div>
-                                        <div class="mdc-notched-outline__notch">
-                                            <label for="password" class="mdc-floating-label mdc-theme--primary">Password</label>
-                                        </div>
-                                        <div class="mdc-notched-outline__trailing"></div>
-                                    </div>
-                                </div>
-                                <div class="mdc-text-field-helper-line">
-                                    <div id="password-helper-text" class="mdc-text-field-helper-text" aria-hidden="true">
-                                        Enter your Account Password
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex">
-                                <button class="mdc-button mdc-button--outlined mdc-theme--secondary" type="submit">
-                                    <span class="mdc-button__label">Sign In</span>
-                                </button>
-                            </div>
-                        </form>
-                    </div>
+        <div class="flex full-height">
+            <div class="mdc-card signin-card mdc-elevation--z4">
+                <div class="login-head align-text-center">
+                    <img src="images/favicon/android-chrome-192x192.png" alt="Logo" width="48">
+                    <h5 class="mdc-typography--headline5">Sign in</h5   >
+                    <h6 class="mdc-typography--subtitle1 hidden hide-on-mac">to continue to Apple Book Store</h6>
+                    <h6 class="mdc-typography--subtitle1 hidden show-on-mac">to continue to &#xF8FF Book Store</h6>
+                    <hr>
                 </div>
+                <form action="" class="mdc-form">
+                    <div class="mdc-text-field mdc-text-field--outlined">
+                        <input type="text" id="email" class="mdc-text-field__input" aria-controls="email-helper-text" aria-describedby="email-helper-text">
+                        <div class="mdc-notched-outline">
+                            <div class="mdc-notched-outline__leading"></div>
+                            <div class="mdc-notched-outline__notch">
+                                <label for="email" class="mdc-floating-label mdc-theme--primary">Your Email</label>
+                            </div>
+                            <div class="mdc-notched-outline__trailing"></div>
+                        </div>
+                    </div>
+                    <div class="mdc-text-field-helper-line">
+                        <div id="email-helper-text" class="mdc-text-field-helper-text" aria-hidden="true">
+                            Enter a valid E-Mail Address   
+                            <!-- Ex: John-Appleseed@mac.com -->
+                        </div>
+                    </div>
+                    <div class="mdc-text-field-container">
+                        <div class="mdc-text-field mdc-text-field--outlined">
+                            <input type="password" id="password" class="mdc-text-field__input" aria-controls="password-helper-text" aria-describedby="password-helper-text">
+                            <div class="mdc-notched-outline">
+                                <div class="mdc-notched-outline__leading"></div>
+                                <div class="mdc-notched-outline__notch">
+                                    <label for="password" class="mdc-floating-label mdc-theme--primary">Password</label>
+                                </div>
+                                <div class="mdc-notched-outline__trailing"></div>
+                            </div>
+                        </div>
+                        <div class="mdc-text-field-helper-line">
+                            <div id="password-helper-text" class="mdc-text-field-helper-text" aria-hidden="true">
+                                Enter your Account Password
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <button class="mdc-button mdc-button--outlined mdc-theme--secondary" type="submit">
+                            <span class="mdc-button__label">Sign In</span>
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
 
-        <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>  
         <script src="js/mdc-init.js"></script>
     </body>
 </html>
