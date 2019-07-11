@@ -6,6 +6,8 @@ var MDCTextFields = document.querySelectorAll('.mdc-text-field');
 for(var i = 0; i < MDCTextFields.length; i++)
   mdc.textField.MDCTextField.attachTo(MDCTextFields[i]);
 
+mdc.list.MDCList.attachTo(document.querySelector('.mdc-list')).wrapFocus = true;
+
 function isMacintosh() {
   return navigator.platform.indexOf('Mac') > -1
 }
