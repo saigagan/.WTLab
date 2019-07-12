@@ -6,8 +6,6 @@ var MDCTextFields = document.querySelectorAll('.mdc-text-field');
 for(var i = 0; i < MDCTextFields.length; i++)
   mdc.textField.MDCTextField.attachTo(MDCTextFields[i]);
 
-mdc.list.MDCList.attachTo(document.querySelector('.mdc-list')).wrapFocus = true;
-
 function isMacintosh() {
   return navigator.platform.indexOf('Mac') > -1
 }
@@ -18,6 +16,7 @@ function isWindows() {
  
 if(isMacintosh()) {
   var hidden = document.querySelectorAll('.hide-on-mac')
+  console.log(hidden)
   for(var i = 0; i < hidden.length; i++) {
     hidden[i].style.display = "none";
   }
