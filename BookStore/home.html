@@ -22,7 +22,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>  
     </head>
-    <body>
+    <body class="flex">
         <header class="mdc-top-app-bar mdc-theme--primary-bg mdc-elevation--z4">
             <div class="mdc-top-app-bar__row">
                 <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
@@ -37,122 +37,120 @@
             </div>
         </header>
 
-        <div class="body">
-            <aside class="mdc-drawer home-drawer mdc-elevation--z4 float-left">
-                <div class="mdc-drawer__content">
-                    <nav class="mdc-list">
-                        <a class="mdc-list-item mdc-list-item--activated" href="#" aria-current="page">
-                            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">star</i>
-                            <span class="mdc-list-item__text">Featured</span>
-                        </a>
+        <aside class="mdc-permenant-drawer mdc-top-app-bar--fixed-adjust home-drawer mdc-elevation--z4 float-left">
+            <div class="mdc-drawer__content">
+                <nav class="mdc-list">
+                    <a class="mdc-list-item mdc-list-item--activated" href="#" aria-current="page">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">star</i>
+                        <span class="mdc-list-item__text">Featured</span>
+                    </a>
+                
+                    <hr class="mdc-list-divider">
+                    <h6 class="mdc-list-group__subheader">Top Charts</h6>
+                    <a class="mdc-list-item" href="#">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">attach_money</i>
+                        <span class="mdc-list-item__text">Top Selling Books</span>
+                    </a>
+                    <a class="mdc-list-item" href="#">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">money_off</i>
+                        <span class="mdc-list-item__text">Top Free Books</span>
+                    </a>
                     
-                        <hr class="mdc-list-divider">
-                        <h6 class="mdc-list-group__subheader">Top Charts</h6>
-                        <a class="mdc-list-item" href="#">
-                            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">attach_money</i>
-                            <span class="mdc-list-item__text">Top Selling Books</span>
-                        </a>
-                        <a class="mdc-list-item" href="#">
-                            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">money_off</i>
-                            <span class="mdc-list-item__text">Top Free Books</span>
-                        </a>
-                        
-                        <hr class="mdc-list-divider">
-                        <h6 class="mdc-list-group__subheader">Categories</h6>
-                        <a class="mdc-list-item" href="#">
-                            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">category</i>
-                            <span class="mdc-list-item__text">Biographies & memoirs</span>
-                        </a>
-                        <a class="mdc-list-item" href="#">
-                            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">category</i>
-                            <span class="mdc-list-item__text">Business & investing</span>
-                        </a>
-                        <!-- <a class="mdc-list-item" href="#">
-                            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">category</i>
-                            <span class="mdc-list-item__text">Children's Books</span>
-                        </a>
-                        <a class="mdc-list-item" href="#">
-                            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">category</i>
-                            <span class="mdc-list-item__text">Cooking & Food</span>
-                        </a> -->
-                        <a class="mdc-list-item" href="#">
-                            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">category</i>
-                            <span class="mdc-list-item__text">Engineering</span>
-                        </a>
-                        <a class="mdc-list-item" href="#">
-                            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">category</i>
-                            <span class="mdc-list-item__text">Fiction & literature</span>
-                        </a>
-                        <!-- <a class="mdc-list-item" href="#">
-                            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">category</i>
-                            <span class="mdc-list-item__text">Health, mind & body</span>
-                        </a> -->
-                        <a class="mdc-list-item" href="#">
-                            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">category</i>
-                            <span class="mdc-list-item__text">History</span>
-                        </a>
-                        <!-- <a class="mdc-list-item" href="#">
-                            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">category</i>
-                            <span class="mdc-list-item__text">Religion & Spirituality</span>
-                        </a>
-                        <a class="mdc-list-item" href="#">
-                            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">category</i>
-                            <span class="mdc-list-item__text">Romance</span>
-                        </a> -->
-                        
-                        <hr class="mdc-list-divider">
-                        <h6 class="mdc-list-group__subheader">Top Authors</h6>
-                        <a class="mdc-list-item" href="#">
-                            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">person</i>
-                            <span class="mdc-list-item__text">Arthur C. Clarke</span>
-                        </a>
-                        <a class="mdc-list-item" href="#">
-                            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">person</i>
-                            <span class="mdc-list-item__text">Charles Dickens</span>
-                        </a>
-                        <!-- <a class="mdc-list-item" href="#">
-                            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">person</i>
-                            <span class="mdc-list-item__text">J. K. Rowling</span>
-                        </a>
-                        <a class="mdc-list-item" href="#">
-                            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">person</i>
-                            <span class="mdc-list-item__text">Leo Tolstoy</span>
-                        </a>
-                        <a class="mdc-list-item" href="#">
-                            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">person</i>
-                            <span class="mdc-list-item__text">Mark Twain</span>
-                        </a> -->
-                        <a class="mdc-list-item" href="#">
-                            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">person</i>
-                            <span class="mdc-list-item__text">Michio Kaku</span>
-                        </a>
-                        <a class="mdc-list-item" href="#">
-                            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">person</i>
-                            <span class="mdc-list-item__text">Neil deGrasse Tyson</span>
-                        </a>
-                        <a class="mdc-list-item" href="#">
-                            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">person</i>
-                            <span class="mdc-list-item__text">Stephen Hawking</span>
-                        </a>
-                        <!-- <a class="mdc-list-item" href="#">
-                            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">person</i>
-                            <span class="mdc-list-item__text">Stephen King</span>
-                        </a> -->
+                    <hr class="mdc-list-divider">
+                    <h6 class="mdc-list-group__subheader">Categories</h6>
+                    <a class="mdc-list-item" href="#">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">category</i>
+                        <span class="mdc-list-item__text">Biographies & memoirs</span>
+                    </a>
+                    <a class="mdc-list-item" href="#">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">category</i>
+                        <span class="mdc-list-item__text">Business & investing</span>
+                    </a>
+                    <!-- <a class="mdc-list-item" href="#">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">category</i>
+                        <span class="mdc-list-item__text">Children's Books</span>
+                    </a>
+                    <a class="mdc-list-item" href="#">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">category</i>
+                        <span class="mdc-list-item__text">Cooking & Food</span>
+                    </a> -->
+                    <a class="mdc-list-item" href="#">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">category</i>
+                        <span class="mdc-list-item__text">Engineering</span>
+                    </a>
+                    <a class="mdc-list-item" href="#">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">category</i>
+                        <span class="mdc-list-item__text">Fiction & literature</span>
+                    </a>
+                    <!-- <a class="mdc-list-item" href="#">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">category</i>
+                        <span class="mdc-list-item__text">Health, mind & body</span>
+                    </a> -->
+                    <a class="mdc-list-item" href="#">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">category</i>
+                        <span class="mdc-list-item__text">History</span>
+                    </a>
+                    <!-- <a class="mdc-list-item" href="#">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">category</i>
+                        <span class="mdc-list-item__text">Religion & Spirituality</span>
+                    </a>
+                    <a class="mdc-list-item" href="#">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">category</i>
+                        <span class="mdc-list-item__text">Romance</span>
+                    </a> -->
+                    
+                    <hr class="mdc-list-divider">
+                    <h6 class="mdc-list-group__subheader">Top Authors</h6>
+                    <a class="mdc-list-item" href="#">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">person</i>
+                        <span class="mdc-list-item__text">Arthur C. Clarke</span>
+                    </a>
+                    <a class="mdc-list-item" href="#">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">person</i>
+                        <span class="mdc-list-item__text">Charles Dickens</span>
+                    </a>
+                    <!-- <a class="mdc-list-item" href="#">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">person</i>
+                        <span class="mdc-list-item__text">J. K. Rowling</span>
+                    </a>
+                    <a class="mdc-list-item" href="#">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">person</i>
+                        <span class="mdc-list-item__text">Leo Tolstoy</span>
+                    </a>
+                    <a class="mdc-list-item" href="#">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">person</i>
+                        <span class="mdc-list-item__text">Mark Twain</span>
+                    </a> -->
+                    <a class="mdc-list-item" href="#">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">person</i>
+                        <span class="mdc-list-item__text">Michio Kaku</span>
+                    </a>
+                    <a class="mdc-list-item" href="#">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">person</i>
+                        <span class="mdc-list-item__text">Neil deGrasse Tyson</span>
+                    </a>
+                    <a class="mdc-list-item" href="#">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">person</i>
+                        <span class="mdc-list-item__text">Stephen Hawking</span>
+                    </a>
+                    <!-- <a class="mdc-list-item" href="#">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">person</i>
+                        <span class="mdc-list-item__text">Stephen King</span>
+                    </a> -->
 
-                    </nav>
-                </div>
-            </aside>
+                </nav>
+            </div>
+        </aside>
 
-            <div class="content float-left">
-                <div class="books-section">
-                    <h3 class="heading">Featured Books</h3>
+        <div class="body">
+            <div class="content">
+                <div class="books-section" id="books-section">
                 </div>
             </div>
         </div>
 
         <script src="js/mdc-init.js"></script>
-        <script>
-            mdc.list.MDCList.attachTo(document.querySelector('.mdc-list')).wrapFocus = true;
-        </script>
+        <script src="js/books_data.js"></script>
+        <script src="js/home.js"></script>
     </body>
 </html>
