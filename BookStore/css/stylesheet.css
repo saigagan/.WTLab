@@ -37,7 +37,7 @@ hr {
     flex-grow: 1.0;
     padding-top: 64px;
 
-    max-width: 100%;
+    width: 100%;
     overflow-x: hidden;
 }
 
@@ -111,6 +111,10 @@ hr {
 	margin: 0px 8px;
 }
 
+.error {
+    color: rgb(255, 59, 48);
+}
+
 .hero {
     height: 100%;
     justify-content: center;
@@ -179,6 +183,7 @@ hr {
     overflow-y: hidden;
     white-space: nowrap;
     font-size: 0px;
+    margin-bottom: 10px;
 }
 
 .scroll-div .mdc-card {

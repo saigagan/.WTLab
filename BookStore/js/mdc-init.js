@@ -1,11 +1,3 @@
-var MDCButtons = document.querySelectorAll('.mdc-button');
-for(var i = 0; i < MDCButtons.length; i++)
-  mdc.ripple.MDCRipple.attachTo(MDCButtons[i]);
-
-var MDCTextFields = document.querySelectorAll('.mdc-text-field');
-for(var i = 0; i < MDCTextFields.length; i++)
-  mdc.textField.MDCTextField.attachTo(MDCTextFields[i]);
-
 function isMacintosh() {
   return navigator.platform.indexOf('Mac') > -1
 }
@@ -26,3 +18,18 @@ if(isMacintosh()) {
     hidden[i].style.display = "none";
   }
 }
+
+var MDCButtons = document.querySelectorAll('.mdc-button');
+MDCButtons.forEach(function(element, index) {
+  mdc.ripple.MDCRipple.attachTo(element);
+})
+
+var MDCButtons = document.querySelectorAll('.mdc-card__primary-action');
+MDCButtons.forEach(function(element, index) {
+  mdc.ripple.MDCRipple.attachTo(element);
+})
+
+var MDCTextFields = document.querySelectorAll('.mdc-text-field');
+MDCTextFields.forEach(function(element, index) {
+  mdc.textField.MDCTextField.attachTo(element);
+})

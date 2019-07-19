@@ -57,6 +57,7 @@ let books_data = `{
             "image": "hit_refresh.jpeg"
         }
     ],
+
     "top_selling": [
         {
             "name": "Astrophysics for People in a Hurry",

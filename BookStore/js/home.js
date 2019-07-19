@@ -5,11 +5,9 @@ let data = JSON.parse(books_data)
 let books_section = document.getElementById('books-section')
 categories.forEach(function(category, index) {
     books_section.innerHTML +=
-        `<div id="`+category.toLowerCase().replace(/\s+/g, '_')+`">
-            <h3 class="heading">`+category+`</h3>
-            <div class="scroll-div" id="`+category.toLowerCase().replace(/\s+/g, '_')+`_div">
-                                    
-            </div>
+        `<h3 class="heading" id="`+category.toLowerCase().replace(/\s+/g, '_')+`">`+category+`</h3>
+        <div class="scroll-div" id="`+category.toLowerCase().replace(/\s+/g, '_')+`_div">
+                                
         </div>
         `
 })
