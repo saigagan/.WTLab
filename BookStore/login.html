@@ -32,7 +32,7 @@
                     <h6 class="mdc-typography--subtitle1 hidden show-on-mac">to continue to &#xF8FF Book Store</h6>
                     <hr>
                 </div>
-                <form action="home.html" class="mdc-form">
+                <form action="javascript:validateInputWithReturn('email', 'email-helper-text', 'home.html')" class="mdc-form">
                     <div class="mdc-text-field mdc-text-field--outlined">
                         <input type="text" id="email" class="mdc-text-field__input" aria-controls="email-helper-text" aria-describedby="email-helper-text">
                         <div class="mdc-notched-outline">
@@ -44,9 +44,8 @@
                         </div>
                     </div>
                     <div class="mdc-text-field-helper-line">
-                        <div id="email-helper-text" class="mdc-text-field-helper-text" aria-hidden="true">
-                            Enter a valid E-Mail Address   
-                            <!-- Ex: John-Appleseed@mac.com -->
+                        <div id="email-helper-text" class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent" aria-hidden="true">
+                            Enter a valid E-Mail Address
                         </div>
                     </div>
                     <div class="mdc-text-field-container">
@@ -61,7 +60,7 @@
                             </div>
                         </div>
                         <div class="mdc-text-field-helper-line">
-                            <div id="password-helper-text" class="mdc-text-field-helper-text" aria-hidden="true">
+                            <div id="password-helper-text" class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent" aria-hidden="true">
                                 Enter your Account Password
                             </div>
                         </div>
@@ -76,5 +75,18 @@
         </div>
 
         <script src="js/mdc-init.js"></script>
+        <script>
+            function validateInputWithReturn(email_id, email_label_id, url) {
+                var email = document.getElementById(email_id).value.trim()
+                var email_label = document.getElementById(email_label_id)
+                
+                if(email.match(/^[A-Za-z\._]+@[A-Za-z]+\.[A-Za-z]{2,3}$/g)) {
+                    location.href = url 
+                } else {
+                    email_label.innerHTML = '<span class="error">Invalid Email<span>'
+                }
+
+            }
+        </script>
     </body>
 </html>
