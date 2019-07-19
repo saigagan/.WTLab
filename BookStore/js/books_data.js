@@ -57,7 +57,7 @@ let books_data = `{
             "image": "hit_refresh.jpeg"
         }
     ],
-    "top selling": [
+    "top_selling": [
         {
             "name": "Astrophysics for People in a Hurry",
             "author": "Neil deGrasse Tyson",
