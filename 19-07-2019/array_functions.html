@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Array Functions</title>
+    </head>
+    <body>
+        <script>
+            let array = ['Hello,', 'This', 'is', 'a', 'JavaScript']
+            
+            console.log('Array: ' + array)
+            array.push('Array')
+            console.log('After push: ' + array)
+
+            console.log('Array length: ' + array.length)
+            array.forEach(function(item, index) {
+                console.log('Element @ ' + index + ' = ' + item)
+            })
+
+            array.push('!!!')
+            console.log('array.pop(): '+array.pop())
+            console.log('array.join(" "): ' + array.join(' '))
+            console.log('array.slice(1, 3): ' + array.slice(1, 3))
+            console.log('array.sort(): ' + array.sort())
+            console.log('array.indexOf("a"): ' + array.indexOf('a'))
+            console.log('array.lastIndexOf("This"): ' + array.lastIndexOf('This'))
+        </script>
+    </body>
+</html>
