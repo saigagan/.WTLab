@@ -38,6 +38,7 @@ hr {
     padding-top: 64px;
 
     width: 100%;
+    max-width: 100%;
     overflow-x: hidden;
 }
 
@@ -177,7 +178,6 @@ hr {
 }
 
 .scroll-div {
-    width: 100%;
     padding: 15px;
     overflow-x: scroll;
     overflow-y: hidden;

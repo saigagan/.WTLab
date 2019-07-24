@@ -22,7 +22,7 @@ categories.forEach(function(category, index) {
             <div class="book-card">
                 <div class="book-card-media">
                     <div class="book-card-image">
-                        <img src="thumbnails/`+category+'/'+book.image+`" alt="" srcset="">
+                        <img src="thumbnails/`+'/'+book.image+`" alt="" srcset="">
                     </div>
                 </div>
                 <div class="book-card-content-container">
