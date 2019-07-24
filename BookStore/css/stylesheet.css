@@ -3,7 +3,7 @@
     --mdc-theme-secondary: rgb(0, 122, 255);
     --mdc-theme-background: #fff;
     --mdc-theme-surface: #fff;
-    --mdc-theme-error: #b00020;
+    --mdc-theme-error: rgb(255, 59, 48);
     --mdc-theme-on-primary: #fff;
     --mdc-theme-on-secondary: #fff;
     --mdc-theme-on-surface: #000;
@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0px;
 }
 
-hr {
+hr, .hr {
     border: 0px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -112,8 +112,8 @@ hr {
 	margin: 0px 8px;
 }
 
-.error {
-    color: rgb(255, 59, 48);
+.error, .destructive {
+    color: var(--mdc-theme-error);
 }
 
 .hero {
@@ -319,6 +319,81 @@ hr {
     font-weight: 400;
 }
 
+.cart-list-heading {
+    margin: 0px 15px;
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 20px;
+    flex-direction: row;
+}
+
+.cart-item .book-cover {
+    margin-right: 10px;
+    max-width: 160px;
+    max-height: 230px;
+}
+
+.cart-item .book-details {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1.0;
+    margin-left: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.cart-item .book-details .book-author {
+    margin-bottom: 10px;
+}
+
+.cart-item .book-details .book-pricing {
+    margin-top: auto;
+    margin-bottom: 20px;
+    border: 0px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0px 30px;
+    padding-top: 20px;
+    display: flex;
+}
+
+.cart-item .book-details .book-pricing span {
+    flex-grow: 1.0;
+}
+
+.sticky-price-card {
+    padding-top: 50px;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+.mdc-card.price-card {
+    width: 100%;
+    padding: 20px 30px;
+    display: inline-block;
+}
+
+.price-card-head {
+    margin-bottom: 5px;
+    padding: 5px 0px;
+}
+
+.price-card-body table {
+    margin: 0px;
+}
+
+.price-card-body td {
+    padding: 7px 0px;
+}
+
+.price-card-body td.hr {
+    padding: 10px 0px;
+}
+
 .material-icons-outlined {
     font-weight: lighter;
 }
@@ -345,8 +420,13 @@ hr {
     border-color: var(--mdc-theme-secondary)
 }
 
-.mdc-button--outlined {
+.mdc-button--outlined, .mdc-button--raised {
     padding: 15px 30px;
+}
+
+.mdc-card--outlined {
+    border: 1px solid var(--mdc-theme-primary);
+    border-radius: 4px;
 }
 
 .mdc-typography,
@@ -395,4 +475,8 @@ hr {
 
 .margin--0-10 {
     margin: 0px 10px;
+}
+
+.margin--0-20 {
+    margin: 0px 20px;
 }

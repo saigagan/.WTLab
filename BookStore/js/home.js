@@ -44,7 +44,9 @@ categories.forEach(function(category, index) {
                                 <div class="book-card-content-table-cell book-card-book-price-cell">
                                     <div>
                                         <span class="book-card-book-actual-price">`+book.actual_price+`</span>
-                                        <span class="book-card-book-price">`+book.price+`</span>
+                                        <span class="book-card-book-price">`+
+                                            ((book.price == 0)? "Free":"$" + book.price.toFixed(2))+
+                                        `</span>
                                     </div>
                                 </div>
                             </div>

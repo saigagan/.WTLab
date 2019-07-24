@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="images/favicon/android-chrome-512x512.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+        <link rel="manifest" href="images/favicon/site.webmanifest">
+
+        <title>Book Store</title>
+        
+        <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined">
+        <link rel="stylesheet" href="css/stylesheet.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>  
+    </head>
+    <body class="flex">
+        <header class="mdc-top-app-bar mdc-theme--primary-bg mdc-elevation--z4">
+            <div class="mdc-top-app-bar__row">
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                    <span class="mdc-top-app-bar__title show-on-mac">&#xF8FF Books Store</span>
+                    <span class="mdc-top-app-bar__title hide-on-mac">Apple Books Store</span>
+                </section>
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end padding--end-20" role="toolbar">
+                    <!-- <a href="#" class="bag mdc-top-app-bar__action-item"></a> -->
+                    <a href="home.html" class="material-icons mdc-top-app-bar__action-item" aria-label="Home">home</a>
+                    <a href="#" class="material-icons mdc-top-app-bar__action-item padding--end-20" aria-label="Account">account_circle</a>
+                </section>
+            </div>
+        </header>
+
+        <div class="body">
+            <div class="mdc-layout-grid flex full-height margin--0-20">
+                <div class="mdc-layout-grid__inner full-height">
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
+                        <h5 class="cart-list-heading mdc-typography--headline5">Shopping Cart <hr> </h4>
+                        <div class="cart-list" id="cart-list">
+                            
+                        </div>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1"></div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3">
+                        <div class="sticky-price-card">
+                            <div class="mdc-card price-card mdc-elevation--z8">
+                                <div class="price-card-head">
+                                    <h5 class="mdc-typography--headline5">Order Summary</h5>
+                                    <hr>
+                                </div>
+                                <div class="price-card-body">
+                                    <table width=100%>
+                                        <tr><td>Total Items:</td><td id="items">4</td></tr>
+                                        <tr><td>Total Price:</td><td id="price">$32.86</td></tr>
+                                        <tr><td>Delivery Charges:</td><td id="delivery">$5.20</td></tr>
+                                        <tr><td>Offers:</td><td id="offers">-$3.06</td></tr>
+                                        <tr><td>Subtotal:</td><td id="subtotal">35.00</td></tr>
+                                        <tr>
+                                            <td>Taxes: <span class="mdc-typography--caption" id="taxes_per">(15%)</span></td>
+                                            <td id="taxes">$5.25</td>
+                                        </tr>
+                                        <tr><td class="hr" colspan="2"></td></tr>
+                                        <tr>
+                                            <td class="mdc-typography--headline6">Total:</td>
+                                            <td class="mdc-typography--headline6" id="total">$40.25</td>
+                                        </tr>
+                                    </table>
+                                    <hr>
+                                    <div class="flex">
+                                        <button class="mdc-button mdc-button--raised mdc-theme--secondary-bg" type="submit">
+                                            <span class="mdc-button__label">Proceed to Payment</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/books_data.js"></script>
+        <script src="js/cart.js"></script>
+        <script src="js/mdc-init.js"></script>
+    </body>
+</html>
