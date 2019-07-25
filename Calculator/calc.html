@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Calculator</title>
+
+        <link rel="shortcut icon" href="calculator.ico" type="image/x-icon">
+
+        <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="stylesheet.css">
+
+        <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    </head>
+    <body>
+        <div class="mdc-card mdc-elevation--z8">
+            <h5 class="mdc-typography--headline5">Calculator</h5>
+            <hr>
+            <div class="mdc-text-field mdc-text-field--outlined">
+                <input type="text" class="mdc-text-field__input" id="output">
+                <div class="mdc-notched-outline">
+                    <div class="mdc-notched-outline__leading"></div>
+                    <div class="mdc-notched-outline__notch">
+                    <!-- <label for="tf-outlined" class="mdc-floating-label">Your Name</label> -->
+                    </div>
+                    <div class="mdc-notched-outline__trailing"></div>
+                </div>
+            </div>
+            <div class="btn-table">
+                <div class="btn-row">
+                    <button class="mdc-button mdc-button--outlined mdc-theme--secondary" onclick="buttonClicked(7)">
+                        <span class="mdc-button__label">7</span>
+                    </button>
+                    <button class="mdc-button mdc-button--outlined mdc-theme--secondary" onclick="buttonClicked(8)">
+                        <span class="mdc-button__label">8</span>
+                    </button>
+                    <button class="mdc-button mdc-button--outlined mdc-theme--secondary" onclick="buttonClicked(9)">
+                        <span class="mdc-button__label">9</span>
+                    </button>
+                    <button class="mdc-button mdc-button--outlined mdc-theme--secondary">
+                        <span class="mdc-button__label">/</span>
+                    </button>
+                </div>
+                <div class="btn-row">
+                    <button class="mdc-button mdc-button--outlined mdc-theme--secondary" onclick="buttonClicked(4)">
+                        <span class="mdc-button__label">4</span>
+                    </button>
+                    <button class="mdc-button mdc-button--outlined mdc-theme--secondary" onclick="buttonClicked(5)">
+                        <span class="mdc-button__label">5</span>
+                    </button>
+                    <button class="mdc-button mdc-button--outlined mdc-theme--secondary" onclick="buttonClicked(6)">
+                        <span class="mdc-button__label">6</span>
+                    </button>
+                    <button class="mdc-button mdc-button--outlined mdc-theme--secondary">
+                        <span class="mdc-button__label">*</span>
+                    </button>
+                </div>
+                <div class="btn-row">
+                    <button class="mdc-button mdc-button--outlined mdc-theme--secondary" onclick="buttonClicked(1)">
+                        <span class="mdc-button__label">1</span>
+                    </button>
+                    <button class="mdc-button mdc-button--outlined mdc-theme--secondary" onclick="buttonClicked(2)">
+                        <span class="mdc-button__label">2</span>
+                    </button>
+                    <button class="mdc-button mdc-button--outlined mdc-theme--secondary" onclick="buttonClicked(3)">
+                        <span class="mdc-button__label">3</span>
+                    </button>
+                    <button class="mdc-button mdc-button--outlined mdc-theme--secondary">
+                        <span class="mdc-button__label">-</span>
+                    </button>
+                </div>
+                <div class="btn-row">
+                    <button class="mdc-button mdc-button--outlined mdc-theme--secondary" onclick="buttonClicked('.')">
+                        <span class="mdc-button__label" style="font-size: 24px;">.</span>
+                    </button>
+                    <button class="mdc-button mdc-button--outlined mdc-theme--secondary" onclick="buttonClicked(0)">
+                        <span class="mdc-button__label">0</span>
+                    </button>
+                    <button class="mdc-button mdc-button--outlined mdc-theme--secondary" onclick="showOutput()">
+                        <span class="mdc-button__label">=</span>
+                    </button>
+                    <button class="mdc-button mdc-button--outlined mdc-theme--secondary">
+                        <span class="mdc-button__label">+</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function buttonClicked(value) {
+                document.getElementById("output").value += value
+            }
+
+            function showOutput() {
+                
+            }
+        </script>
+    </body>
+</html>
