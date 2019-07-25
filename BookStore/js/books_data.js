@@ -2,7 +2,7 @@ let books_data = `{
     "featured": [
         {
             "id": 1,
-            "name": "A Beirf History of Time",
+            "name": "A Brief History of Time",
             "author": "Stephen Hawking",
             "actual_price": "$18.99",
             "price": 12.99,
