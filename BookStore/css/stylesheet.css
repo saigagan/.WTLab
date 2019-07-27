@@ -17,10 +17,19 @@
     src: url(fonts/SF-Pro-Display-Regular.otf)
 }
 
+@font-face {
+    font-family: SF-Mono;
+    src: url(fonts/SFMono-Regular.otf)
+}
+
 html, body {
     margin: 0px;
     height: 100%;
     width: 100%;
+    font-family: var(--typography-font-family);
+}
+
+.mdc-list, .mdc-list-group__subheader, .mdc-top-app-bar__title {
     font-family: var(--typography-font-family);
 }
 
@@ -402,13 +411,13 @@ hr, .hr {
 .credit-card {
     display: flex;
     flex-direction: column;
-    width: 400px;
-    height: 256px;
+    width: 420px;
+    height: 280px;
     margin: auto;
     padding: 20px;
     border-radius: 10px;
 
-    font-family: 'Courier New';
+    font-family: SF-Mono;
     color: white;
 
     background-image: linear-gradient(135deg, #FF5F6D, #FFC371);
@@ -446,12 +455,22 @@ hr, .hr {
 
 .credit-card .valid {
     margin: 10px;
-    display: inline;
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.credit-card .valid .valid-text {
+    margin: auto 5px;
     text-align: right;
 }
 
-.credit-card .valid span {
-    /* font-size: 8px; */
+.credit-card .valid .valid-date {
+    margin: auto 5px;
+}
+
+.credit-card .card-logo {
+    height: 60px;
 }
 
 .material-icons-outlined {
