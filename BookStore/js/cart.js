@@ -63,3 +63,5 @@ document.getElementById('taxes_per').innerHTML = "(" + taxes_per + "%)"
 document.getElementById('taxes').innerHTML = "$" + taxes.toFixed(2)
 total = subtotal + taxes
 document.getElementById('total').innerHTML = "$" + total.toFixed(2)
+document.getElementById('payment_btn_label').innerHTML = "Pay $" + total.toFixed(2)
+console.log(document.getElementById('payment_btn_label'))

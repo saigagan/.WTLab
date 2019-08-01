@@ -8,7 +8,6 @@ function isWindows() {
  
 if(isMacintosh()) {
   var hidden = document.querySelectorAll('.hide-on-mac')
-  console.log(hidden)
   for(var i = 0; i < hidden.length; i++) {
     hidden[i].style.display = "none";
   }
