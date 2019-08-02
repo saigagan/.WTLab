@@ -26,8 +26,10 @@
         <header class="mdc-top-app-bar mdc-theme--primary-bg mdc-elevation--z4">
             <div class="mdc-top-app-bar__row">
                 <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-                    <span class="mdc-top-app-bar__title show-on-mac">&#xF8FF Books Store</span>
-                    <span class="mdc-top-app-bar__title hide-on-mac">Apple Books Store</span>
+                    <a href="index.html">
+                        <span class="mdc-top-app-bar__title show-on-mac">&#xF8FF Books Store</span>
+                        <span class="mdc-top-app-bar__title hide-on-mac">Apple Books Store</span>
+                    </a>
                 </section>
                 <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end padding--end-20" role="toolbar">
                     <!-- <a href="#" class="bag mdc-top-app-bar__action-item"></a> -->
@@ -43,10 +45,55 @@
                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
                         <div class="payment-heading">
                             <h5 class="title mdc-typography--headline5">Payment Methods</h5>
-                            <h6 class="subtitle mdc-typography--subtitle2">Please select your preffered payment method</h6>
+                            <h6 class="subtitle mdc-typography--subtitle2">Please select your preferred payment method</h6>
                             <hr>
                         </div>
-                        
+                        <div class="mdc-card mdc-card--outlined payment-options-card">
+                            <div class="payment-option">
+                                <input type="radio" name="payment-option" id="">
+                                <div class="mdc-card credit-card mdc-elevation--z8">
+                                    <div class="card-logo">
+                                        <img src="images/payment/cards/mc_1x.png" srcset="images/payment/cards/mc_3x.png 3x, images/payment/cards/mc_2x.png 2x, images/payment/cards/mc_1x.png 1x" alt="mastercard logo">
+                                    </div>
+                                    <div class="card-number">
+                                        5874 XXXX XXXX 7463
+                                    </div>
+                                    <div class="holder-details">
+                                        <div class="holder-name">
+                                            Sai Hemanth<br>Bheemreddy
+                                        </div>
+                                        <div class="valid">
+                                            <div class="valid-text">
+                                                Valid<br>Thru
+                                            </div>
+                                            <div class="valid-date">
+                                                09/<br>24
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="payment-option">
+                                <input type="radio" name="payment-option" id="">
+                                <img src="images/payment/apple_pay.png" >
+                            </div>
+                            <hr>
+                            <div class="payment-option">
+                                <input type="radio" name="payment-option" id="">
+                                <img src="images/payment/paypal.png" alt="PayPal Logo">
+                            </div>
+                            <hr>
+                            <div class="payment-option">
+                                <input type="radio" name="payment-option" id=""> 
+                                Net Banking
+                            </div>   
+                            <hr>
+                            <div class="payment-option">
+                                <input type="radio" name="payment-option" id=""> 
+                                Cash on Delivery (COD)
+                            </div>                         
+                        </div>
                     </div>
                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1"></div>
                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3">
@@ -87,31 +134,15 @@
             </div>
         </div>
 
-        <!-- <div class="mdc-card credit-card mdc-elevation--z8">
-            <div class="card-logo">
-                <img src="images/cards/mc_1x.png" srcset="images/cards/mc_3x 3x, images/cards/mc_2x 2x, images/cards/mc_1x 1x" alt="mastercard logo">
-            </div>
-            <div class="card-number">
-                5874 XXXX XXXX 7463
-            </div>
-            <div class="holder-details">
-                <div class="holder-name">
-                    Sai Hemanth<br>Bheemreddy
-                </div>
-                <div class="valid">
-                     <span>Valid Thru</span> 09/22
-                    <div class="valid-text">
-                        Valid<br>Thru
-                    </div>
-                    <div class="valid-date">
-                        09/<br>24
-                    </div>
-                </div>
-            </div>
-        </div> -->
+        
         
         <script src="js/books_data.js"></script>
         <script src="js/payment.js"></script>
         <script src="js/mdc-init.js"></script>
+        <script>
+            var redElements = document.querySelectorAll('.credit-card');
+            console.log(redElements[0])
+            console.log(redElements[1])
+        </script>
     </body>
 </html>

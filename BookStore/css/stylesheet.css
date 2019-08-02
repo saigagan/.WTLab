@@ -9,6 +9,8 @@
     --mdc-theme-on-surface: #000;
     --mdc-theme-on-error: #fff;
 
+    -apple-pay-button-type: buy;
+
     --typography-font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', SF-Pro, 'Calibri', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif
 }
 
@@ -417,19 +419,39 @@ hr, .hr {
     margin-left: 20px;
 }
 
+.payment-options-card {
+    padding: 20px;
+}
+
+.payment-options-card hr {
+    width: 100%
+}
+
+.payment-option {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.payment-option input {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 20px;
+}
+
 .credit-card {
     display: flex;
     flex-direction: column;
     width: 420px;
     height: 280px;
-    margin: auto;
+    margin-right: 30px;
     padding: 20px;
     border-radius: 10px;
 
     font-family: 'SF Mono', SF-Mono;
     color: white;
 
-    background-image: linear-gradient(135deg, #FF5F6D, #FFC371);
+    /* background-image: linear-gradient(135deg, #FF5F6D, #FFC371); */
     /* background-image: linear-gradient(135deg, #EECDA3, #EF629F); */
     /* background-image: linear-gradient(135deg, #f46b45, #eea849); */
     /* background-image: linear-gradient(135deg, #ee9ca7, #ffdde1); */
@@ -444,6 +466,14 @@ hr, .hr {
     user-select: none;
 }
 
+.credit-card:first-of-type {
+    background-image: linear-gradient(135deg, #FF5F6D, #FFC371);
+}
+
+.credit-card:nth-of-type(2) {
+    background-image: linear-gradient(135deg, #EECDA3, #EF629F);
+}
+
 .credit-card .card-number {
     font-size: 22px;
     text-align: center;
@@ -454,8 +484,24 @@ hr, .hr {
 }
 
 .credit-card .holder-details {
+    font-size: 18px;
     display: flex;
     flex-direction: row;
+}
+
+@media screen and (max-width: 1440px) {
+    .credit-card {
+        width: 300px;
+        height: 200px;
+    }
+    
+    .credit-card .card-number {
+        font-size: 16px;
+    }
+
+    .credit-card .holder-details {
+        font-size: 14px;
+    }
 }
 
 .credit-card .holder-name {
