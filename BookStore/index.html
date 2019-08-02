@@ -17,10 +17,12 @@
         
         <link rel="stylesheet" href="css/material-components-web.min.css">
         <link rel="stylesheet" href="css/material-icons.css">
+        <link rel="stylesheet" href="css/swiper.min.css">
         <link rel="stylesheet" href="css/stylesheet.css">
 
         <script src="js/jquery.min.js"></script>
         <script src="js/material-components-web.min.js"></script>  
+        <script src="js/swiper.min.js"></script>
     </head>
     <body class="flex">
         <header class="mdc-top-app-bar mdc-theme--primary-bg mdc-elevation--z18">
@@ -43,7 +45,19 @@
                         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
                             <div class="hero">
                                 <div class="hero-image">
-                                    <img src="images/hero.jpg" width="100%">
+                                    <!-- <img src="images/hero.jpg" width="100%"> -->
+                                    <div class="swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide" style="background-image:url('images/books/2001.jpg')"></div>
+                                            <div class="swiper-slide" style="background-image:url('images/books/elon_musk.jpg')"></div>
+                                            <div class="swiper-slide" style="background-image:url('images/books/a_brief_history_of_time.jpg')"></div>
+                                            <div class="swiper-slide" style="background-image:url('images/books/becoming.jpg')"></div>
+                                            <div class="swiper-slide" style="background-image:url('images/books/steve_jobs.jpg')"></div>
+                                            <div class="swiper-slide" style="background-image:url('images/books/apfpiah.jpg')"></div>
+                                            <div class="swiper-slide" style="background-image:url('images/books/educated.jpg')"></div>
+                                        </div>
+                                        <!-- <div class="swiper-pagination"></div> -->
+                                    </div>
                                     <div class="hero-text">
                                         <h2 class="mdc-typography--headline2 show-on-mac">&#xF8FF Books Store</h2>
                                         <h2 class="mdc-typography--headline2 hide-on-mac">Apple Books Store</h2>
@@ -157,5 +171,6 @@
         </div>
          
         <script src="js/mdc-init.js"></script>
+        <script src="js/coverflow.js"></script>
     </body>
 </html>

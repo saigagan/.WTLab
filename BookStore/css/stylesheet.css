@@ -51,7 +51,7 @@ hr, .hr {
 
 .body {
     flex-grow: 1.0;
-    padding-top: 64px;
+    margin-top: 64px;
 
     width: 100%;
     max-width: 100%;
@@ -152,6 +152,19 @@ hr, .hr {
 
 .hero .mdc-layout-grid {
     width: 100%;
+}
+
+.swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.swiper-slide {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 191px;
+    height: 300px;
 }
 
 .sign-in-with-apple {
