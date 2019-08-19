@@ -15,8 +15,306 @@
     white-space: nowrap;
     word-wrap: normal;
     -webkit-font-smoothing: antialiased;
-    padding: 0px 10px;
+    /* padding: 0px 10px; */
 }
+
+.sf-symbols.circle:before {
+    content: '\100000'
+}
+
+.sf-symbols.circle-fill:before {
+    content: '\100001'
+}
+
+.sf-symbols.circle-lefthalf-fill:before {
+    content: '\100002'
+}
+
+.sf-symbols.circle-righthalf-fill:before {
+    content: '\100003'
+}
+
+.sf-symbols.a-circle:before {
+    content: '\100004'
+}
+
+.sf-symbols.a-circle-fill:before {
+    content: '\100005'
+}
+
+.sf-symbols.b-circle:before {
+    content: '\100006'
+}
+
+.sf-symbols.b-circle-fill:before {
+    content: '\100007'
+}
+
+.sf-symbols.c-circle:before {
+    content: '\100008'
+}
+
+.sf-symbols.c-circle-fill:before {
+    content: '\100009'
+}
+
+.sf-symbols.d-circle:before {
+    content: '\10000A'
+}
+
+.sf-symbols.d-circle-fill:before {
+    content: '\10000B'
+}
+
+.sf-symbols.e-circle:before {
+    content: '\10000C'
+}
+
+.sf-symbols.e-circle-fill:before {
+    content: '\10000D'
+}
+
+.sf-symbols.f-circle:before {
+    content: '\10000E'
+}
+
+.sf-symbols.f-circle-fill:before {
+    content: '\10000F'
+}
+
+.sf-symbols.g-circle:before {
+    content: '\100010'
+}
+
+.sf-symbols.g-circle-fill:before {
+    content: '\100011'
+}
+
+.sf-symbols.h-circle:before {
+    content: '\100012'
+}
+
+.sf-symbols.h-circle-fill:before {
+    content: '\100013'
+}
+
+.sf-symbols.i-circle:before {
+    content: '\100014'
+}
+
+.sf-symbols.i-circle-fill:before {
+    content: '\100015'
+}
+
+.sf-symbols.j-circle:before {
+    content: '\100016'
+}
+
+.sf-symbols.j-circle-fill:before {
+    content: '\100017'
+}
+
+.sf-symbols.k-circle:before {
+    content: '\100018'
+}
+
+.sf-symbols.k-circle-fill:before {
+    content: '\100019'
+}
+
+.sf-symbols.l-circle:before {
+    content: '\10001A'
+}
+
+.sf-symbols.l-circle-fill:before {
+    content: '\10001B'
+}
+
+.sf-symbols.m-circle:before {
+    content: '\10001C'
+}
+
+.sf-symbols.m-circle-fill:before {
+    content: '\10001D'
+}
+
+.sf-symbols.n-circle:before {
+    content: '\10001E'
+}
+
+.sf-symbols.n-circle-fill:before {
+    content: '\10001F'
+}
+
+.sf-symbols.o-circle:before {
+    content: '\100020'
+}
+
+.sf-symbols.o-circle-fill:before {
+    content: '\100021'
+}
+
+.sf-symbols.p-circle:before {
+    content: '\100022'
+}
+
+.sf-symbols.p-circle-fill:before {
+    content: '\100023'
+}
+
+.sf-symbols.q-circle:before {
+    content: '\100024'
+}
+
+.sf-symbols.q-circle-fill:before {
+    content: '\100025'
+}
+
+.sf-symbols.r-circle:before {
+    content: '\100026'
+}
+
+.sf-symbols.r-circle-fill:before {
+    content: '\100027'
+}
+
+.sf-symbols.s-circle:before {
+    content: '\100028'
+}
+
+.sf-symbols.s-circle-fill:before {
+    content: '\100029'
+}
+
+.sf-symbols.t-circle:before {
+    content: '\10002A'
+}
+
+.sf-symbols.t-circle-fill:before {
+    content: '\10002B'
+}
+
+.sf-symbols.u-circle:before {
+    content: '\10002C'
+}
+
+.sf-symbols.u-circle-fill:before {
+    content: '\10002D'
+}
+
+.sf-symbols.v-circle:before {
+    content: '\10002E'
+}
+
+.sf-symbols.v-circle-fill:before {
+    content: '\10002F'
+}
+
+.sf-symbols.w-circle:before {
+    content: '\100030'
+}
+
+.sf-symbols.w-circle-fill:before {
+    content: '\100031'
+}
+
+.sf-symbols.x-circle:before {
+    content: '\100032'
+}
+
+.sf-symbols.x-circle-fill:before {
+    content: '\100033'
+}
+
+.sf-symbols.y-circle:before {
+    content: '\100034'
+}
+
+.sf-symbols.y-circle-fill:before {
+    content: '\100035'
+}
+
+.sf-symbols.z-circle:before {
+    content: '\100036'
+}
+
+.sf-symbols.z-circle-fill:before {
+    content: '\100037'
+}
+
+.sf-symbols.dollarsign-circle:before {
+    content: '\100597'
+}
+
+.sf-symbols.dollarsign-circle-fill:before {
+    content: '\100598'
+}
+
+.sf-symbols.centsign-circle:before {
+    content: '\100599'
+}
+
+.sf-symbols.centsign-circle-fill:before {
+    content: '\10059A'
+}
+
+.sf-symbols.yensign-circle:before {
+    content: '\10059B'
+}
+
+.sf-symbols.yensign-circle-fill:before {
+    content: '\10059C'
+}
+
+.sf-symbols.sterling-circle:before {
+    content: '\10059D'
+}
+
+.sf-symbols.sterling-circle-fill:before {
+    content: '\10059E'
+}
+
+.sf-symbols.francsign-circle:before {
+    content: '\10059F'
+}
+
+.sf-symbols.francsign-circle-fill:before {
+    content: '\1005A0'
+}
+
+.sf-symbols.florinsign-circle:before {
+    content: '\1005A1'
+}
+
+.sf-symbols.florinsign-circle-fill:before {
+    content: '\1005A2'
+}
+
+.sf-symbols.turkishlirasign-circle:before {
+    content: '\1005A3'
+}
+
+.sf-symbols.turkishlirasign-circle-fill:before {
+    content: '\1005A4'
+}
+
+.sf-symbols.rublesign-circle:before {
+    content: '\1005A5'
+}
+
+.sf-symbols.rublesign-circle-fill:before {
+    content: '\1005A6'
+}
+
+.sf-symbols.eurosign-circle:before {
+    content: '\1005A7'
+}
+
+.sf-symbols.eurosign-circle-fill:before {
+    content: '\1005A8'
+}
+
+/**/
 
 .sf-symbols.bag:before {
     content: '\100363'
