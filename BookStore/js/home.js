@@ -12,13 +12,13 @@ categories.forEach(function(category, index) {
         `
 })
 
-categories.forEach(function(category, index) {
+categories.forEach(function(category, cindex) {
     category = category.toLowerCase().replace(/\s+/g, '_')
     let books = data[category]
     let div = document.getElementById(category+'_div')
-    books.forEach(function(book, index) {
+    books.forEach(function(book, bindex) {
         div.innerHTML += 
-        `<div class="mdc-card mdc-card__primary-action --mdc-primary-action-radius mdc-elevation--z6 margin--0-10">
+        `<div class="mdc-card mdc-card__primary-action --mdc-primary-action-radius mdc-elevation--z6 margin--0-10" onclick="present(`+cindex+`,`+bindex+`)" >
             <div class="book-card">
                 <div class="book-card-media">
                     <div class="book-card-image">
@@ -56,4 +56,25 @@ categories.forEach(function(category, index) {
             </div>
         </div>`
     })
+})
+
+let model = $("#book-model")
+let model_content = $("#book-content")
+
+function present(cindex, bindex) {
+    const book = data[categories[cindex].toLowerCase().replace(/\s+/g, '_')][bindex]
+    console.log(book)
+
+    model.css('display', 'flex')
+}
+
+$(window).click(function(event) {
+    console.log(model);
+    
+    if($(event.target).is(model))
+        model.css('display', 'none')
+})
+
+$(".close").click(function() {
+    model.css('display', 'none')
 })
