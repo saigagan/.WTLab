@@ -85,7 +85,7 @@
                 var email = document.getElementById(email_id).value.trim()
                 var email_label = document.getElementById(email_label_id)
                 
-                if(email.match(/^[A-Za-z0-9\._]+@[A-Za-z]+\.[A-Za-z]{2,3}$/g)) {
+                if(email.match(/^[A-Za-z0-9\._]+@[A-Za-z\.]+\.[A-Za-z]{2,4}$/g)) {
                     location.href = url 
                 } else {
                     email_label.innerHTML = '<span class="error">Invalid Email<span>'
