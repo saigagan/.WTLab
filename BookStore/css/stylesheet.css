@@ -371,7 +371,7 @@ hr, .hr {
     font-weight: 400;
 }
 
-.book-model {
+.book-model-container {
     display: none;
     position: fixed;
     z-index: 999;
@@ -384,16 +384,34 @@ hr, .hr {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-.book-model-content {
+.book-model {
     margin: auto;
+    width: 756px;
+    border-radius: 4px;
 }
 
-.book-model-content .close {
+.book-model .nav-bar {
+    padding: 5px 20px;
+    background-color: rgb(227, 227, 227);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: inherit;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.book-model .nav-bar .title {
+    float: left;
+}
+
+.book-model .content {
+    padding: 5px 20px;
+}
+
+.book-model .close {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-    margin-bottom: 10px;
     cursor: pointer;
 }
 

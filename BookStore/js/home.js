@@ -65,6 +65,8 @@ function present(cindex, bindex) {
     const book = data[categories[cindex].toLowerCase().replace(/\s+/g, '_')][bindex]
     console.log(book)
 
+    $("#model-title").text(book.name)
+
     model.css('display', 'flex')
 }
 
@@ -75,6 +77,6 @@ $(window).click(function(event) {
         model.css('display', 'none')
 })
 
-$(".close").click(function() {
+$("#close").click(function() {
     model.css('display', 'none')
 })
