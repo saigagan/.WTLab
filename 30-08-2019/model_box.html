@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Model Box</title>
+
+        <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+
+        <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <style>
+            .mdc-card {
+                padding: 10px 20px;
+                display: inline-block;
+            }
+
+            .model {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                overflow: auto;
+                background-color: rgb(0, 0, 0);
+                background-color: rgba(0, 0, 0, 0.4);
+            }
+
+            .model-content {
+                margin: auto;
+            }
+            
+            .close {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <button class="model-button" onclick="openModel(1)">Open Model 1</button>
+        <button class="model-button" onclick="openModel(2)">Open Model 2</button>
+
+        <div class="model" id="model">
+                    
+            <div class="mdc-card model-content mdc-elevation--z8">
+                <span class="close">&times;</span>
+                <div id="content">
+                    Model Dialog
+                </div>
+            </div>
+        </div>
+
+        <script>
+            let model = $("#model")
+            let model_content = $("#content")
+            let button = $('.model-button')
+
+            function openModel(id) {
+                model_content.text("Button: " + id)
+                model.css('display', 'flex')
+            }
+
+            $(window).click(function(event) {
+                console.log(model);
+                
+                if($(event.target).is(model))
+                    model.css('display', 'none')
+            })
+            
+            $(".close").click(function() {
+                model.css('display', 'none')
+            })
+        </script>
+    </body>
+</html>
