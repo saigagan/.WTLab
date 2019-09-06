@@ -1,34 +1,28 @@
-<HTML>
-
-<HEAD>
-    <TITLE> credit card validation</TITLE>
-</HEAD>
-<script>
-    functionformValidator()
-    {
-        var name = document.getElementById('txt1');
-        varcreditcardno = document.getElementById('txt2').value;
-        varaccountno = document.getElementById('txt3').value;
-        varaddr = document.getElementById('add');
-        var bank = document.getElementById('txt4');
-        varmobileno = document.getElementById('txt5').value;
-        if (isAlphabet(name, "please enter any alphabet")) {
-
-            if (isNumeric(creditcardno, "enter numbers only")) {
-
-                if (isNumeric(accountno, "enter numbers only")) {
-                    if (isAlphanumeric(addr, "Address can have alphabet &number")) {
-                        if (isAlphabet(bank, "please enter any alphabet")) {
-                            if (isNumeric(mobileno, "enter numbers only")) {
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        functionisAlphabet(elem, helpmsg)
+<html>
+    <head>
+        <title> credit card validation</title>
+    </head>
+    <script>
+        function formValidator()
         {
-            varalphaExp = /^[a-zA-Z]+$/;
+            var name = document.getElementById('txt1');
+            var creditcardno = document.getElementById('txt2').value;
+            var accountno = document.getElementById('txt3').value;
+            var addr = document.getElementById('add');
+            var bank = document.getElementById('txt4');
+            var mobileno = document.getElementById('txt5').value;
+            if (isAlphabet(name, "Name: Please enter any alphabet") && isNumeric(creditcardno, "Credit Card: Enter numbers only") && isNumeric(accountno, "Account No: Enter numbers only")
+                && isAlphanumeric(addr, "Address can have alphabet &number") && isAlphabet(bank, "Bank: Please enter any alphabet") && isNumeric(mobileno, "Mobile: Enter numbers only")) {
+                
+                return true
+            }
+            
+            return false
+        }
+
+        function isAlphabet(elem, helpmsg)
+        {
+            var alphaExp = /^[a-zA-Z]+$/;
             if (elem.value.match(alphaExp)) {
                 return true;
             }
@@ -38,9 +32,10 @@
                 return false;
             }
         }
-        functionisAlphanumeric(elem, helpmsg)
+
+        function isAlphanumeric(elem, helpmsg)
         {
-            varalphaNumExp = /^[0-9a-zA-Z]+$/;
+            var alphaNumExp = /^[0-9a-zA-Z]+$/;
             if (elem.value.match(alphaNumExp)) {
                 return true;
             }
@@ -50,52 +45,37 @@
                 return false;
             }
         }
-        functionisNumeric(elem, helpmsg)
+
+        function isNumeric(elem, helpmsg)
         {
 
-            varnumExp = /^\d{10}$/;
+            var numExp = /^\d+$/;
             if (elem.match(numExp)) {
                 return true;
             }
             else {
                 alert(helpmsg);
-                //elem.focus();
+                elem.focus();
                 return false;
             }
         }
-    }
-</script>
+    </script>
 
-<BODY>
-
-    <form name="form3" onSubmit="return formValidator()">
-        <h1 align=center> credit card</h1>
-        <br>
-        <br>
-        <center>
-            name :
-            <input type="text" value="" id="txt1">
-            <br>
-            <br> creditcardno :
-            <input type="text" value="" id="txt2">
-            <br>
-            <br> accountno:
-            <input type="text" value="" id="txt3">
-            <br>
-            <br> address:
-            <input type="text" value="" id="add">
-            <br>
-            <br>bank:
-            <input type="text" value="" id="txt4">
-            <br>
-            <br>mobileno:
-            <input type="text" value="" id="txt5">
+    <body>
+        <form name="form3" onSubmit="return formValidator()">
+            <h1 align=center> Credit Card</h1>
             <br>
             <br>
-            <input type="submit" value="submit" name="btn1">
-            <input type="button" value="cancel" name="btn2">
-        </center>
-    </form>
-</BODY>
-
-</HTML>
+            <center>
+                name :<input type="text" value="" id="txt1"><br><br> 
+                credit card no :<input type="text" value="" id="txt2"><br><br>
+                account no:<input type="text" value="" id="txt3"><br><br> 
+                address:<input type="text" value="" id="add"><br><br>
+                bank:<input type="text" value="" id="txt4"><br><br>
+                mobile no:<input type="text" value="" id="txt5"><br><br>
+                <input type="submit" value="submit" name="btn1">
+                <input type="button" value="cancel" name="btn2">
+            </center>
+        </form>
+    </body>
+</html>
