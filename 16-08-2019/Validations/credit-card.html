@@ -6,11 +6,11 @@
         function formValidator()
         {
             var name = document.getElementById('txt1');
-            var creditcardno = document.getElementById('txt2').value;
-            var accountno = document.getElementById('txt3').value;
+            var creditcardno = document.getElementById('txt2');
+            var accountno = document.getElementById('txt3');
             var addr = document.getElementById('add');
             var bank = document.getElementById('txt4');
-            var mobileno = document.getElementById('txt5').value;
+            var mobileno = document.getElementById('txt5')
             if (isAlphabet(name, "Name: Please enter any alphabet") && isNumeric(creditcardno, "Credit Card: Enter numbers only") && isNumeric(accountno, "Account No: Enter numbers only")
                 && isAlphanumeric(addr, "Address can have alphabet &number") && isAlphabet(bank, "Bank: Please enter any alphabet") && isNumeric(mobileno, "Mobile: Enter numbers only")) {
                 
