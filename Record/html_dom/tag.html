@@ -6,7 +6,7 @@
     <body>
         <p>This is a p element</p>
         <p>This is also a p element.</p>
-        <p>This is also a p element - Click the button to change the background color of all p elements in this document.</p>
+        <p>This is also a p element - Click the button to change the color of all p elements in this document.</p>
         <button id="btn">Click ME!</button>
 
         <script>
@@ -15,7 +15,7 @@
             button.onclick = function() {
                 var x = document.getElementsByTagName('p')
                 for (var i = 0; i < x.length; i++) {
-                    x[i].style.color = "red";
+                    x[i].style.color = "red"
                 }
             }
         </script>
