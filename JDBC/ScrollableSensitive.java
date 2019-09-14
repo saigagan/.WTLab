@@ -1,25 +1,20 @@
 import java.sql.*;
 
-class ScrollableInsensitive
-{
-	public static void main(String args[]) throws Exception
-	{
-		Connection con=null;
-		Statement st=null;
+public class ScrollableInsensitive {
+	public static void main(String args[]) throws Exception {
+		Connection con = null;
+		Statement st = null;
 		
 		Class.forName("oracle.jdbc.driver.OracleDriver");
-		con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","nikhil","nikhil4433");
+		con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","system","master");
 		System.out.println("\nConnection Successful.\n");
 		
-		st=con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
-		ResultSet rs=st.executeQuery("select * from account");
+		st = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
+		ResultSet rs = st.executeQuery("select * from account");
 		
 		System.out.println("All Records");
-		
 		while(rs.next())
-		{
 			System.out.println("|"+rs.getInt(1)+"|"+rs.getString(2)+"|"+rs.getInt(3)+"|");
-		}
 		
 		rs.last();
 		System.out.println("\nReplaced to Last Position");
@@ -34,6 +29,5 @@ class ScrollableInsensitive
 		con.close();
 		st.close();
 		rs.close();
-		
 	}
 }

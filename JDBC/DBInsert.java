@@ -1,16 +1,13 @@
 import java.sql.*;
 
-class DBInsert
-{
-	public static void main(String args[])
-	{
-		try
-		{
+public class DBInsert {
+	public static void main(String args[]) {
+		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");			
-			Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","nikhil","nikhil4433");
+			con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","system","master");
 			System.out.println("\nConnection Successful.\n");
 			
-			Statement st=con.createStatement();
+			Statement st = con.createStatement();
 			
 			st.execute("insert into Account values(1,'Ramu',50000)");
 			st.execute("insert into Account values(2,'Ramesh',70000.25)");
@@ -19,10 +16,7 @@ class DBInsert
 			
 			st.close();
 			con.close();
-		}
-		
-		catch(Exception sqle)
-		{
+		} catch(Exception sqle) {
 			System.out.println("Exception: "+sqle);
 		}
 	}
