@@ -6,7 +6,7 @@ public class CallableStatementDemo {
 		CallableStatement cst = null;
 		
 		Class.forName("oracle.jdbc.driver.OracleDriver");
-		con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","system","master");
+		con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","system","manager");
 		System.out.println("\nConnection Successful.\n");
 		
 		cst = con.prepareCall("{call square(?,?)}");
@@ -21,6 +21,7 @@ public class CallableStatementDemo {
 	}
 }
 
+// Before running create this procedure
 /*
 	create or replace procedure square(a in number,b out number)
 	as
@@ -29,3 +30,4 @@ public class CallableStatementDemo {
 		end
 	/
 */
+// To Run: java -cp C:\oraclexe\app\oracle\product\10.2.0\server\jdbc\lib\ojdbc14.jar CallableStatementDemo

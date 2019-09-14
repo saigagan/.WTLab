@@ -5,7 +5,7 @@ public class DatabaseMeta {
 		Connection con = null;
 		Class.forName("oracle.jdbc.driver.OracleDriver");
 		
-		con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","system","master");
+		con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","system","manager");
 		System.out.println("\nConnection Successful.\n");
 		
 		String s[] = {"TABLE"};
@@ -27,3 +27,5 @@ public class DatabaseMeta {
 		rs.close();
 	}
 }
+
+// To Run: java -cp C:\oraclexe\app\oracle\product\10.2.0\server\jdbc\lib\ojdbc14.jar DatabaseMeta

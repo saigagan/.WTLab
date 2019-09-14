@@ -6,7 +6,7 @@ public class TransactionsDemo {
 		Statement st = null;
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","system","master");
+			con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","system","manager");
 			System.out.println("\nConnection Successful.\n");
 		
 			con.setAutoCommit(false);
@@ -30,3 +30,5 @@ public class TransactionsDemo {
 		}
 	}
 }
+
+// To Run: java -cp C:\oraclexe\app\oracle\product\10.2.0\server\jdbc\lib\ojdbc14.jar TransactionsDemo

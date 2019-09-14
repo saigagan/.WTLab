@@ -7,7 +7,7 @@ public class ResultSetDemo {
 		ResultSet rs = null;
 		
 		Class.forName("oracle.jdbc.driver.OracleDriver");
-		con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","system","master");
+		con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","system","manager");
 		st = con.createStatement();
 		System.out.println("\nConnection Successful.\n");
 		
@@ -22,3 +22,5 @@ public class ResultSetDemo {
 		con.close();
 	}
 }
+
+// To Run: java -cp C:\oraclexe\app\oracle\product\10.2.0\server\jdbc\lib\ojdbc14.jar ResultSetDemo
