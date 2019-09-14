@@ -11,7 +11,6 @@ public class BatchUpdateDemo {
 		
 			con.setAutoCommit(false);
 			st = con.createStatement();
-			st.execute("create table account(id number, name varchar2(30), amt number)");
 			st.addBatch("insert into account values(7,'Rishi',90000)");
 			st.addBatch("insert into account values(8,'Hemanth',99999)");
 			st.executeBatch();
