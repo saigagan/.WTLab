@@ -845,7 +845,7 @@
         </web-app>
     ```
 
-* ## Question 13: Write a Servlet Program to insert data into a database table
+* ## Question 13: Write a Servlet Program for User Registration
 
     index.html
     ```
