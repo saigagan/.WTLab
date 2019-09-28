@@ -17,6 +17,7 @@ public class RegisterUser extends HttpServlet {
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
         res.setContentType("text/html");
         PrintWriter out = res.getWriter();
+        out.println("<html><head><title>Database Insert</title></head><body><h1>");
 
         String name = req.getParameter("name");
         String email = req.getParameter("email");
@@ -24,7 +25,7 @@ public class RegisterUser extends HttpServlet {
         String cpwd = req.getParameter("cpwd");
 
         if(!pwd.equals(cpwd)) {
-            out.write("Passwords don't match");
+            out.println("Passwords don't match");
             return;
         }
 
@@ -33,21 +34,23 @@ public class RegisterUser extends HttpServlet {
 
             Class.forName("oracle.jdbc.driver.OracleDriver");
             Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","system","manager");
-            PreparedStatement ps = con.prepareStatement("insert into users values(?, ?, ?)");
+            PreparedStatement ps = con.prepareStatement("INSERT INTO users(name, email, pwd) VALUES (?, ?, ?)");
             ps.setString(1, name);
             ps.setString(2, email);
             ps.setString(3, pwd);
             
             if(ps.executeUpdate() > 0)
-                out.write("Registration Successful");
+                out.println("Registration Successful");
             else
-                out.write("An error occured while registration");
+                out.println("An error occured while registration");
             
             ps.close();
             con.close();
         } catch(Exception ex) {
-            out.write("An error occured while registration.<br>" + ex);
+            out.println("An error occured while registration.<br>" + ex.getMessage());
         }
+        
+        out.println("</h1></body></html>");
     }
 
     public static byte[] getSHA(String input) throws NoSuchAlgorithmException 
@@ -68,3 +71,8 @@ public class RegisterUser extends HttpServlet {
     } 
 
 }
+
+/**
+ * Before running, create table in Oracle DB using,
+ * create table users(id NUMBER GENERATED ALWAYS AS IDENTITY, name VARCHAR2(255), email varchar2(255), pwd varchar2(255));
+ */
