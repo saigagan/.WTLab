@@ -551,7 +551,7 @@
             </xs:schema>
         ```
 
-* ## Write XSLT page for XML file in Question 5
+* ## Question 6: Write XSLT page for XML file in Question 5
     
     books.xml
     ```
@@ -649,4 +649,286 @@
             </xsl:template>
 
         </xsl:stylesheet>
+    ```
+
+* ## Question 7: Write a Program to establish a Connection with the Database and create a Statement to insert values into a table
+    ```
+        import java.sql.*;
+
+        public class DBInsert {
+            public static void main(String args[]) {
+                Connection con = null;
+                try {
+                    Class.forName("oracle.jdbc.driver.OracleDriver");			
+                    con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","system","manager");
+                    System.out.println("\nConnection Successful.\n");
+                    
+                    Statement st = con.createStatement();
+                    st.execute("insert into Account values(1,'Ramu',50000)");
+                    st.execute("insert into Account values(2,'Ramesh',70000.25)");
+                    st.execute("insert into Account values(3,'Sharath',80000)");
+                    System.out.println("Insert Operation Successful.");
+                    
+                    st.close();
+                    con.close();
+                } catch(Exception sqle) {
+                    System.out.println("Exception: "+sqle);
+                }
+            }
+        }
+    ```
+
+* ## Question 8: Write a Program to use PreparedStatement interface to insert values into a table
+    ```
+        import java.sql.*;
+
+        public class PreparedStatementDemo {
+            public static void main(String args[]) throws Exception {
+                Connection con = null;
+                PreparedStatement ps = null;
+                
+                Class.forName("oracle.jdbc.driver.OracleDriver");
+                con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","system","manager");
+                System.out.println("\nConnection Successful.\n");
+                
+                ps = con.prepareStatement("insert into account values(?,?,?)");
+                ps.setInt(1,4);
+                ps.setString(2,"Prajeet");
+                ps.setInt(3,50000);
+                ps.execute();
+                System.out.println("Insert Operation Successful.");
+                
+                ps.close();
+                con.close();
+            }
+        }
+    ```
+
+* ## Question 9: Write a Program to use CallableStatement interface to call a procedure declared in the database
+    ```
+        import java.sql.*;
+
+        public class CallableStatementDemo {
+            public static void main(String args[]) throws Exception {
+                Connection con = null;
+                CallableStatement cst = null;
+                
+                Class.forName("oracle.jdbc.driver.OracleDriver");
+                con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","system","manager");
+                System.out.println("\nConnection Successful.\n");
+                
+                cst = con.prepareCall("{call square(?,?)}");
+                cst.setInt(1,3);
+                cst.registerOutParameter(2,Types.INTEGER);
+                cst.execute();
+                System.out.println("\nProcedure Execution Successful.\n");
+                System.out.println("\nSquare of given number is: " + cst.getInt(2) + "\n");
+                
+                cst.close();
+                con.close();
+            }
+        }
+    ```
+
+* ## Question 10: Write a Program to use ResultSet interface to print the data stored in the Database
+    ```
+        import java.sql.*;
+
+        public class ResultSetDemo {
+            public static void main(String args[]) throws Exception {
+                Connection con = null;
+                Statement st = null;
+                ResultSet rs = null;
+                
+                Class.forName("oracle.jdbc.driver.OracleDriver");
+                con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","system","manager");
+                st = con.createStatement();
+                System.out.println("\nConnection Successful.\n");
+                
+                rs=st.executeQuery("select * from Account");
+                
+                while(rs.next())
+                    System.out.println("|"+rs.getInt(1)+"|"+rs.getString(2)+"|"+rs.getInt(3)+"|");
+                System.out.println("\nEnd of Information Recieved.\n");
+                
+                rs.close();
+                st.close();
+                con.close();
+            }
+        }
+    ```
+
+* ## Question 11: Write a Program to use ResultSetMetaData interface to get the metadata about the ResultSet object
+    ```
+        import java.sql.*;
+
+        public class ResultSetMeta {
+            public static void main(String args[]) throws Exception {
+                Connection con = null;
+                Statement st = null;
+                ResultSet rs = null;
+                ResultSetMetaData rsmd = null;
+                
+                Class.forName("oracle.jdbc.driver.OracleDriver");
+                con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","system","manager");
+                System.out.println("\nConnection Successful.\n");
+                
+                st=con.createStatement();
+                rs=st.executeQuery("select * from account");
+                rsmd=rs.getMetaData();
+                
+                for(int i=0;i<rsmd.getColumnCount();i++)
+                    System.out.print("|"+rsmd.getColumnName(i+1)+"|");
+                
+                System.out.println();
+                while(rs.next())
+                    System.out.println("|"+rs.getInt(1)+"|"+rs.getString(2)+"|"+rs.getInt(3)+"|");
+                
+                rs.close();
+                st.close();
+                con.close();
+                
+            }
+        }
+    ```
+
+* ## Question 12: Write a Servlet Program with Webpage to ask User's Name and show a Hello Message.
+    
+    index.html
+    ```
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <title>Hello</title>
+            </head>
+            <body>
+                <h1>Welcome.</h1>
+                
+                <form method="POST" action="hello">
+                    Name: <input type="text" name="name" > <br>
+                    <input type="submit" value="Display">
+                </form>
+            </body>
+        </html>
+    ```
+
+    WEB-INF/classes/HelloMessage.java
+    ```
+        import javax.servlet.http.*;
+        import javax.servlet.*;
+        import java.io.*;
+
+        public class HelloMessage extends HttpServlet {
+
+            public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
+                res.setContentType("text/html");
+
+                String name = req.getParameter("name");
+
+                PrintWriter out = res.getWriter();
+                out.println("<html><head><title>Hello</title></head><body><h1>Welcome, " + name + "</h1></body></html>");
+            }
+        }
+    ```
+
+    WEB-INF/web.xml
+    ```
+        <web-app>
+            <servlet>
+                <servlet-name>Hello</servlet-name>
+                <servlet-class>HelloMessage</servlet-class>
+            </servlet>
+            <servlet-mapping>
+                <servlet-name>Hello</servlet-name>
+                <url-pattern>/hello</url-pattern>
+            </servlet-mapping>
+        </web-app>
+    ```
+
+* ## Question 13: Write a Servlet Program to insert data into a database table
+
+    index.html
+    ```
+        <!DOCTYPE html>
+        <html lang="en">
+            <head>
+                <title>Database Insert</title>
+            </head>
+            <body>
+                <form action="register" method="post">
+                    <input type="text" name="name" placeholder="Name" required> <br>
+                    <input type="text" name="email" placeholder="E-Mail" required> <br>
+                    <input type="password" name="pwd" placeholder="Password" required> <br>
+                    <input type="password" name="cpwd" placeholder="Confirm Password" required> <br>
+                    <input type="submit" value="Register"> <br>
+                </form>
+            </body>
+        </html>
+    ```
+
+    WEB-INF/classes/RegisterUser.java
+    ```
+        import javax.servlet.http.*;
+        import javax.servlet.*;
+        import java.io.*;
+        import java.sql.*; 
+
+        public class RegisterUser extends HttpServlet {
+
+            public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
+                res.setContentType("text/html");
+                PrintWriter out = res.getWriter();
+                out.println("<html><head><title>Database Insert</title></head><body><h1>");
+
+                String name = req.getParameter("name");
+                String email = req.getParameter("email");
+                String pwd = req.getParameter("pwd");
+                String cpwd = req.getParameter("cpwd");
+
+                if(!pwd.equals(cpwd)) {
+                    out.println("Passwords don't match");
+                    return;
+                }
+
+                try {
+                    Class.forName("oracle.jdbc.driver.OracleDriver");
+                    Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","system","manager");
+                    PreparedStatement ps = con.prepareStatement("INSERT INTO users(name, email, pwd) VALUES (?, ?, ?)");
+                    ps.setString(1, name);
+                    ps.setString(2, email);
+                    ps.setString(3, pwd);
+                    
+                    if(ps.executeUpdate() > 0)
+                        out.println("Registration Successful");
+                    else
+                        out.println("An error occured while registration");
+                    
+                    ps.close();
+                    con.close();
+                } catch(Exception ex) {
+                    out.println("An error occured while registration.<br>" + ex.getMessage());
+                }
+                
+                out.println("</h1></body></html>");
+            }
+        }
+
+        /**
+        * Before running, create table in Oracle DB using,
+        * create table users(id NUMBER GENERATED ALWAYS AS IDENTITY, name VARCHAR2(255), email varchar2(255), pwd varchar2(255));
+        */
+    ```
+
+    WEB-INF/web.xml
+    ```
+        <web-app>
+            <servlet>
+                <servlet-name>Register</servlet-name>
+                <servlet-class>RegisterUser</servlet-class>
+            </servlet>
+            <servlet-mapping>
+                <servlet-name>Register</servlet-name>
+                <url-pattern>/register</url-pattern>
+            </servlet-mapping>
+        </web-app>
     ```
