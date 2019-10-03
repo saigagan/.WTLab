@@ -352,6 +352,14 @@
     content: '\10026d'
 }
 
+.sf-symbols.house:before {
+    content: '\10039e'
+}
+
+.sf-symbols.star:before {
+    content: '\1002c2'
+}
+
 .mdc-top-app-bar .mdc-top-app-bar__action-item::before, .mdc-top-app-bar .mdc-top-app-bar__action-item::after, .mdc-top-app-bar .mdc-top-app-bar__navigation-icon::before, .mdc-top-app-bar .mdc-top-app-bar__navigation-icon::after {
     background-color: transparent;
 }
