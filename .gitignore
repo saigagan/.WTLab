@@ -3,4 +3,5 @@
 .metadata
 .project
 .settings
-deploy
+deploy.txt
+.vscode
