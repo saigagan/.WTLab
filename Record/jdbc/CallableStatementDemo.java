@@ -27,7 +27,7 @@ public class CallableStatementDemo {
 	as
 		begin
 		b:=a*a;
-		end
+		end square;
 	/
 */
 // To Run: java -cp C:\oraclexe\app\oracle\product\10.2.0\server\jdbc\lib\ojdbc14.jar CallableStatementDemo
