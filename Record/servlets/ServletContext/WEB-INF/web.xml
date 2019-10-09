@@ -1,0 +1,14 @@
+<web-app>
+    <servlet>
+        <servlet-name>MyServletContext</servlet-name>
+        <servlet-class>MyServletContext</servlet-class>
+    </servlet>
+    <context-param>
+        <param-name>dname</param-name>
+        <param-value>sun.jdbc.odbc.JdbcOdbcDriver</param-value>
+    </context-param>
+    <servlet-mapping>
+        <servlet-name>MyServletContext</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+</web-app>

@@ -1,0 +1,18 @@
+<web-app>
+    <servlet>
+        <servlet-name>MyServletConfig</servlet-name>
+        <servlet-class>MyServletConfig</servlet-class>
+        <init-param>
+            <param-name>username</param-name>
+            <param-value>system</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value>manager</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MyServletConfig</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+</web-app>
